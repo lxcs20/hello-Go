@@ -2,12 +2,22 @@ package main
 
 import (
 	"fmt"
+
+	structpackage "github.com/lxcs20/hello-go/structPackage"
 )
 
 func main() {
 
 	fmt.Println("hello! Go")
 	fmt.Println("Go! Go!")
+
+	var student1 structpackage.Student
+	student1 = structpackage.Student{}
+	student1.Setfname("lanthong")
+	student1.Setlname("xyt")
+	student1.Setage(20)
+
+	fmt.Println(student1.Getfname())
 
 	// variable()
 	// ifControl()
@@ -19,10 +29,10 @@ func main() {
 	// Array()
 	// slice()
 	// Map()
-	struct_()
+	// struct_()
 }
 
-func variable() {
+func ariable() {
 	var fname string
 	var lname string
 	var age int
@@ -155,6 +165,7 @@ func Map() {
 	} else {
 		fmt.Println("orage not found in myMap")
 	}
+	fmt.Println(valOr)
 }
 
 type Person struct {
